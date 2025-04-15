@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IRCTC Non Veg Menu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f8f8f8;
+      text-align: center;
+    }
+
+    .header-img {
+      width: 100%;
+      height: auto;
+      max-height: 200px;
+      object-fit: cover;
+    }
+
+    .menu-container {
+      background-color: white;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      text-align: left;
+    }
+
+    h2 {
+      text-align: center;
+      color: rgb(127, 9, 9);
+    }
+
+    p {
+      font-size: 16px;
+      margin: 8px 0;
+    }
+
+    .footer {
+      font-size: 14px;
+      color: gray;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Train image -->
+  <img src="train.jpg" alt="Train Image" class="header-img" />
+
+  <!-- Menu content -->
+  <div class="menu-container">
+    <h2>Non Veg Menu</h2>
+    <p><strong>Train Name & No :</strong> MS-NCJ-20627/28</p>
+    <p><strong>Restaurant Name :</strong> Sopan Restaurant</p>
+    <p><strong>Menu :</strong> Masala omlette of 2 eggs 100 GMS + boiled Veg & Finger Chips 50 gms + 2 pes bread.</p>
+    <p><strong>Date :</strong> <span id="menu-date">Loading...</span></p>
+    <p><strong>FSSAI Lic :</strong> 10020912000133</p>
+  </div>
+
+  <script>
+    // Automatically insert today's date in format: Day Month, Year
+    const today = new Date();
+    const options = { day: 'numeric', month: 'long', year: 'numeric' };
+    document.getElementById('menu-date').textContent = today.toLocaleDateString('en-GB', options);
+  </script>
+
+</body>
+</html>
